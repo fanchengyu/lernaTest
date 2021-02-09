@@ -1,8 +1,29 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "add": "npm install && lerna bootstrap",
+    "dev": "lerna run serve --parallel",
+    "build-package": "lerna run build --parallel",
+    "build-package-exp": "lerna run build --parallel --ignore architecture-* && lerna run --scope architecture-dee build:stage",
+    "build-package-demonstration": "lerna run build --parallel --ignore architecture-* && lerna run --scope architecture-dee build:demonstration",
+    "build": "npm run build-package && npm run move",
+    "upload": "npm run build && gulp upload",
+    "exp": "npm run build-package-exp && npm run move",
+    "demo": "npm run build-package-demonstration && npm run move",
+    "move": "node move.js",
+    "lint": "lerna run lint",
+    "clean": "lerna clean && rm -rf node_modules"
+  },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "gulp": "^4.0.2",
+    "gulp-scp2": "^0.2.0",
+    "gulp-ssh": "^0.7.0",
+    "lerna": "^3.22.0",
+    "webpack": "^4.43.0"
+  },
+  "dependencies": {
+    "bpmn-js": "^7.0.1",
+    "node-sass": "^4.14.1"
   }
-
 }
