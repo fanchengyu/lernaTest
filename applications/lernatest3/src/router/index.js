@@ -1,27 +1,20 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
 
-Vue.use(VueRouter)
+import Beizi from '../views/Beizi.vue'
 
-const routes = [
+const routers = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '/789',
+    name: 'Beizi',
+    component: Beizi
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/012',
+    name: 'Lili',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Lili.vue')
   }
 ]
 
-const router = new VueRouter({
-  routes
-})
-
-export default router
+export default routers

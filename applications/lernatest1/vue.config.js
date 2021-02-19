@@ -6,7 +6,8 @@ const APP_NAME = require('./package.json').name
 function resolve(dir) {
   return path.join(__dirname, dir)
 }
-// const deeconfig = require('./dee.config.js')
+const deeconfig = require('./src/testConfig')
+
 const name = '阳易产品集合' // page title
 
 // If your port is set to 80,
@@ -14,7 +15,7 @@ const name = '阳易产品集合' // page title
 // For example, Mac: sudo npm run
 // You can change the port by the following methods:
 // port = 9528 npm run dev OR npm run dev --port = 9528
-const port = process.env.port || process.env.npm_config_port || 9528 // dev port
+const port = process.env.port || process.env.npm_config_port || 9533 // dev port
 
 // All configuration item explanations can be find in https://cli.vuejs.org/config/
 module.exports = {
@@ -36,8 +37,8 @@ module.exports = {
     overlay: {
       warnings: false,
       errors: true
-    }
-    // proxy: deeconfig.PROXY
+    },
+    proxy: deeconfig.PROXY
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that

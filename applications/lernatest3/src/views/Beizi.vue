@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    home1的家
+    Beizi
   </div>
 </template>
 
@@ -8,6 +8,6 @@
 // @ is an alias to /src
 
 export default {
-  name: 'Home'
+  name: 'Beizi'
 }
 </script>

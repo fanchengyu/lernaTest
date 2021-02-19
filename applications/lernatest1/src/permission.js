@@ -13,7 +13,8 @@ router.beforeEach((to, from, next) => {
       if (!cachedModules.has(module)) {
         cachedModules.add(module)
         setTimeout(async() => {
-          const { default: application } = await import('../../' + modules[key] + '/src/main.js')
+          console.log(window.System)
+          const { default: application } = await window.System.import('./' + modules[key] + '/main.js')
           console.log(application)
           if (application && application.routes) {
             console.log(application.routes)

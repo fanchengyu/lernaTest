@@ -1,18 +1,18 @@
 
-import Home from '../views/Home.vue'
+import Wowo from '../views/Wowo.vue'
 const routes = [
   {
     path: '/123',
     name: '123',
-    component: Home
+    component: Wowo
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/456',
+    name: 'Nainiu',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Nainiu.vue')
   }
 ]
 
